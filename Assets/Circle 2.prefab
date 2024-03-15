@@ -138,7 +138,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -175,8 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe269fb86bee3446287295076d7b1801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circlelist:
-  - {fileID: 4618769658257114073, guid: aa63bc55475a04458bce62741dca3696, type: 3}
-  - {fileID: 4618769658257114073, guid: 475ce11440bd441dab9d78e6b8285fec, type: 3}
-  - {fileID: 4618769658257114073}
-  - {fileID: 4618769658257114073, guid: d9345eb6de18b412c9a96abd21d1d678, type: 3}
+  circle1: {fileID: 4618769658257114073, guid: aa63bc55475a04458bce62741dca3696, type: 3}
+  circle2: {fileID: 4618769658257114073, guid: 475ce11440bd441dab9d78e6b8285fec, type: 3}
+  circle3: {fileID: 4618769658257114073}
+  circle4: {fileID: 4618769658257114073, guid: d9345eb6de18b412c9a96abd21d1d678, type: 3}

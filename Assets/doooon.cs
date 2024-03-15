@@ -4,36 +4,40 @@ using UnityEngine;
 
 public class Doooon : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        // シーン開始時に、gravityScaleを1に設定
-        ApplyGravityScale(1);
-    }
+    public GameObject circle1;
+    public GameObject circle2;
+    public GameObject circle3;
+    public GameObject circle4;
+    public Rigidbody2D circle1_g;
+    public Rigidbody2D circle2_g;
+    public Rigidbody2D circle3_g;
+    public Rigidbody2D circle4_g;
 
-    // Update is called once per frame
     void Update()
     {
-        if (transform.position.y > 5.0f)
+        if (transform.position.y > 8.0f)
         {
-            // 特定の条件下で、gravityScaleを-1に変更
             ApplyGravityScale(-1);
         }
-
+        if(transform.position.y > 20.0f)
+        {
+            ApplyDestroy();
+        }
     }
 
-    // gravityScaleを指定値に設定するメソッド
     void ApplyGravityScale(float scale)
     {
-        Rigidbody2D[] allRigidbodies = FindObjectsOfType<Rigidbody2D>();
-        foreach (Rigidbody2D rb in allRigidbodies)
-        {
-            rb.gravityScale = scale;
-        }
-        GameObject[] allGameObjects = FindObjectsOfType<GameObject>();
-        foreach (GameObject go in allGameObjects)
-        {
-            Destroy(go);
-        }
+        circle1_g.gravityScale = scale;
+        circle2_g.gravityScale = scale;
+        circle3_g.gravityScale = scale;
+        circle4_g.gravityScale = scale;
+    }
+
+    void ApplyDestroy()
+    {
+        Destroy(circle1);
+        Destroy(circle2);
+        Destroy(circle3);
+        Destroy(circle4);
     }
 }
